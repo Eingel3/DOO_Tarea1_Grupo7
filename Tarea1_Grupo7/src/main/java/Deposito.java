@@ -1,4 +1,4 @@
 public class Deposito<T>{
-	public T contenido; //contenido es de tipo generico
+	private ArrayList<T> almacen; //almacen es de tipo generico
 
 }
