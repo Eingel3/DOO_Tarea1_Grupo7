@@ -21,23 +21,23 @@ public class Expendedor {
         monedaDeposito = new Deposito<Moneda>();
         
         for (int i = 0; i<cantidad; i++){
-            Bebida temp = new CocaCola(1100+i);
+            CocaCola temp = new CocaCola(1100+i);
             coca.addObjeto(temp);
         }
         for (int i = 0; i<cantidad; i++){
-            Bebida temp = new Sprite(1200+i);
+            Sprite temp = new Sprite(1200+i);
             sprite.addObjeto(temp);
         }
         for (int i = 0; i<cantidad; i++){
-            Bebida temp = new Fanta(1300+i);
+            Fanta temp = new Fanta(1300+i);
             fanta.addObjeto(temp);
         }
         for (int i = 0; i<cantidad; i++){
-            Dulce temp = new Super8(2100+i);  
+            Super8 temp = new Super8(2100+i);
             super8.addObjeto(temp);
         }   
         for (int i = 0; i<cantidad; i++){
-            Dulce temp = new Snicker(2200+i);
+            Snicker temp = new Snicker(2200+i);
             snicker.addObjeto(temp);
         }         
 
@@ -89,7 +89,7 @@ public class Expendedor {
         if (pago.getValor() < InformacionProducto.COCACOLA.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
-                " lo cual es insuficiente, debe de tener un valor de al menos " + InformacionProducto.OCACOLA.getPrecio());
+                " lo cual es insuficiente, debe de tener un valor de al menos " + InformacionProducto.COCACOLA.getPrecio());
         }
         else {
             vuelto = pago.getValor() - InformacionProducto.COCACOLA.getPrecio();
