@@ -8,6 +8,7 @@ public class Expendedor {
     private Deposito<Moneda> monedaDeposito;
 
     private int vuelto;
+    private Producto compra; 
 
 	public Expendedor(int cantidad){
 		coca = new Deposito<CocaCola>();
@@ -58,6 +59,9 @@ public class Expendedor {
             if (sprite.isEmpty()) {
                 throw new NoHayProductoException("No quedan sprites");
             }
+            else { //Quean productos, entonces compramos un producto
+                compra = sprite.getObjeto();
+            }
         }
         break; //Del caso sprite
     }//end switch
@@ -68,6 +72,7 @@ public class Expendedor {
         monedaDeposito.addObjeto(new Moneda100());
         }
 
+    return compra; //Finalmente retornamos el Producto comprado
 
     }
 
