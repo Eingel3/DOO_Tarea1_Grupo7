@@ -76,4 +76,10 @@ public class Expendedor {
         return monedaDeposito.getObjeto();
         }
     }
+
+    class NoHayProductoException extends Exception {
+        public NoHayProductoException(String error){
+            super(error);
+        }
+    }
 }
