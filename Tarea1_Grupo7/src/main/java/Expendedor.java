@@ -59,11 +59,87 @@ public class Expendedor {
             if (sprite.isEmpty()) {
                 throw new NoHayProductoException("No quedan sprites");
             }
-            else { //Quean productos, entonces compramos un producto
+            else { //Quedan productos, entonces compramos un producto
                 compra = sprite.getObjeto();
             }
         }
         break; //Del caso sprite
+
+            case FANTA.getTipo:
+        if (pago.getValor() < FANTA.getPrecio()){
+            monedaDeposito.addObjeto(pago); //El vuelto
+            throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
+                " lo cual es insuficiente, debe de tener un valor de al menos " + FAANTA.getPrecio());
+        }
+        else {
+            vuelto = pago.getValor() - FANTA.getPrecio();
+            //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
+            if (fanta.isEmpty()) {
+                throw new NoHayProductoException("No quedan sprites");
+            }
+            else { //Quedan productos, entonces compramos un producto
+                compra = fanta.getObjeto();
+            }
+        }
+        break;
+
+
+            case COCACOLA.getTipo:
+        if (pago.getValor() < COCACOLA.getPrecio()){
+            monedaDeposito.addObjeto(pago); //El vuelto
+            throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
+                " lo cual es insuficiente, debe de tener un valor de al menos " + COCACOLA.getPrecio());
+        }
+        else {
+            vuelto = pago.getValor() - COCACOLA.getPrecio();
+            //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
+            if (coca.isEmpty()) {
+                throw new NoHayProductoException("No quedan sprites");
+            }
+            else { //Quedan productos, entonces compramos un producto
+                compra = coca.getObjeto();
+            }
+        }
+        break;
+
+
+            case SNICKER.getTipo:
+        if (pago.getValor() < SNICKER.getPrecio()){
+            monedaDeposito.addObjeto(pago); //El vuelto
+            throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
+                " lo cual es insuficiente, debe de tener un valor de al menos " + SNICKER.getPrecio());
+        }
+        else {
+            vuelto = pago.getValor() - SNICKER.getPrecio();
+            //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
+            if (snicker.isEmpty()) {
+                throw new NoHayProductoException("No quedan sprites");
+            }
+            else { //Quedan productos, entonces compramos un producto
+                compra = snicker.getObjeto();
+            }
+        }
+        break;
+
+
+
+            case SUPER8.getTipo:
+        if (pago.getValor() < SUPER8.getPrecio()){
+            monedaDeposito.addObjeto(pago); //El vuelto
+            throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
+                " lo cual es insuficiente, debe de tener un valor de al menos " + SUPER8.getPrecio());
+        }
+        else {
+            vuelto = pago.getValor() - SUPER8.getPrecio();
+            //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
+            if (super8.isEmpty()) {
+                throw new NoHayProductoException("No quedan sprites");
+            }
+            else { //Quedan productos, entonces compramos un producto
+                compra = super8.getObjeto();
+            }
+        }
+        break;
     }//end switch
 
 
