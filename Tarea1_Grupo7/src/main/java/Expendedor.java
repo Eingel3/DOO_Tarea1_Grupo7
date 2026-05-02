@@ -58,6 +58,7 @@ public class Expendedor {
             vuelto = pago.getValor() - InformacionProducto.SPRITE.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (sprite.isEmpty()) {
+                monedaDeposito.addObjeto(pago);
                 throw new NoHayProductoException("No quedan sprites");
             }
             else { //Quedan productos, entonces compramos un producto
@@ -76,6 +77,7 @@ public class Expendedor {
             vuelto = pago.getValor() - InformacionProducto.FANTA.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (fanta.isEmpty()) {
+                monedaDeposito.addObjeto(pago);
                 throw new NoHayProductoException("No quedan fantas");
             }
             else { //Quedan productos, entonces compramos un producto
@@ -95,6 +97,8 @@ public class Expendedor {
             vuelto = pago.getValor() - InformacionProducto.COCACOLA.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (coca.isEmpty()) {
+                monedaDeposito.addObjeto(pago);
+
                 throw new NoHayProductoException("No quedan cocacolas");
             }
             else { //Quedan productos, entonces compramos un producto
@@ -114,6 +118,8 @@ public class Expendedor {
             vuelto = pago.getValor() - InformacionProducto.SNICKER.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (snicker.isEmpty()) {
+                monedaDeposito.addObjeto(pago);
+
                 throw new NoHayProductoException("No quedan snickers");
             }
             else { //Quedan productos, entonces compramos un producto
@@ -134,6 +140,8 @@ public class Expendedor {
             vuelto = pago.getValor() - InformacionProducto.SUPER8.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (super8.isEmpty()) {
+                monedaDeposito.addObjeto(pago);
+                
                 throw new NoHayProductoException("No quedan super8");
             }
             else { //Quedan productos, entonces compramos un producto
