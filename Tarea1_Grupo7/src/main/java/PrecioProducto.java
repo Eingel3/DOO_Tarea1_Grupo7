@@ -9,4 +9,8 @@ public enum PrecioProducto {
 	private PrecioProducto(int precio) {
 		this.precio = precio;
 		}
+
+	public int getPrecio(){
+		return precio;
+	}
 }
