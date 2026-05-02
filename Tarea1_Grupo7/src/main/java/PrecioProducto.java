@@ -4,7 +4,7 @@ public enum PrecioProducto {
 	SNICKER(100),
 	SUPER8(100),
 	FANTA(500);
-	private final int precio;
+	private final int precio; //Todos los precios han de ser multiplos de 100, ya que todas las monedas son multiplo de 100
 
 	private PrecioProducto(int precio) {
 		this.precio = precio;
