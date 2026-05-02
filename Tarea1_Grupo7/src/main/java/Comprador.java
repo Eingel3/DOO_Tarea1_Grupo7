@@ -26,16 +26,16 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
         	temp = refExp.getVuelto();
         }
         }
-        catch (PagoIncorrectoException e){// No se devuelve nada, vuelt es 0 y producto null
+        catch (Expendedor.PagoIncorrectoException e){// No se devuelve nada, vuelt es 0 y producto null
         	System.out.println("Pago incorrecto: " + e.getMessage()); //e.getMessage() obtiene como String el mesnaje del exception
         	consumido = "No se ha consumido nada.";
         }
-        catch (PagoInsuficienteException e ){ //solo se devuelve la misma moneda con la que se intento pagar
+        catch (Expendedor.PagoInsuficienteException e ){ //solo se devuelve la misma moneda con la que se intento pagar
         	System.out.println("Pago insuficiente: " + e.getMessage());
         	consumido = "No se ha consumido nada.";
         	vuelto = refExp.getVuelto().getValor(); //A la moneda obtenida del vuelto le obtenemos el valor y guardamos dicho valor en vuelo
         }
-        catch (NoHayProductoException e){ //solo se devuelve la misma moneda con la que se intento pagar
+        catch (Expendedor.NoHayProductoException e){ //solo se devuelve la misma moneda con la que se intento pagar
         	System.out.println("No hay existencias del producto: " + e.getMessage());
         	consumido = "No se ha consumido nada.";
         	vuelto = refExp.getVuelto().getValor();
