@@ -6,7 +6,7 @@ public enum InformacionProducto {
 	FANTA(500, 13);
 	private final int precio; //Todos los precios han de ser multiplos de 100, ya que todas las monedas son multiplo de 100
 	private final int tipo;
-	private PrecioProducto(int precio, int tipo) {
+	private InformacionProducto(int precio, int tipo) {
 		this.precio = precio;
 		this.tipo = tipo;
 		}
