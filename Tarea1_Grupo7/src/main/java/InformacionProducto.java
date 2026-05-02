@@ -1,4 +1,4 @@
-public enum PrecioProducto {
+public enum InformacionProducto {
 	SPRITE(500), //SPRITE llama a su constructor mediante 500
 	COCACOLA(500),
 	SNICKER(100),
