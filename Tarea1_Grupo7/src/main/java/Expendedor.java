@@ -81,5 +81,11 @@ public class Expendedor {
         public NoHayProductoException(String error){
             super(error);
         }
+
+        class PagoIncorrectoException extends Exception {
+            public PagoIncorrectoException(){
+                super("La moneda con la que desea pagar es incorrecta. Pague con una moneda valida.")
+            }
+        }
     }
 }
