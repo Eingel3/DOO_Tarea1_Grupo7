@@ -141,7 +141,7 @@ public class Expendedor {
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (super8.isEmpty()) {
                 monedaDeposito.addObjeto(pago);
-                
+
                 throw new NoHayProductoException("No quedan super8");
             }
             else { //Quedan productos, entonces compramos un producto
