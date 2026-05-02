@@ -19,6 +19,10 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
         vuelto = 0;
         try {
         Producto comprado = refExp.comprarProducto(productoID, pago); 
+
+        //Si la linea de arriba no lanzo excepciones, podemos entregar el vuelto y consumir el Producto comprado
+
+        consumido = comprado.consumir();
         }
         catch (PagoIncorrectoException e){// No se devuelve nada, vuelt es 0 y producto null
         	System.out.println("Pago incorrecto: " + e.getMessage()); //e.getMessage() obtiene como String el mesnaje del exception
