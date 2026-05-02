@@ -13,8 +13,11 @@ public class Main {
         Comprador c1 = new Comprador(new Moneda1000(), InformacionProducto.SPRITE.getTipo(), exp);
         System.out.println("Consumido: " + c1.compradorConsumido());
         System.out.println("Vuelto: " + c1.compradorVuelto());
+        System.out.println("Comprar sprite, pero ya se acabaron");
+        Comprador c2 = new Comprador(new Moneda1000(), InformacionProducto.SPRITE.getTipo(), exp);
+        System.out.println("Consumido: " + c2.compradorConsumido());
+        System.out.println("Vuelto: " + c2.compradorVuelto());
 
-        
     }
 
 	
