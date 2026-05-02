@@ -1,3 +1,3 @@
-public class Sprite{ //Falta extends
+public class Sprite extends Bebida { //Falta extends
 
 }
