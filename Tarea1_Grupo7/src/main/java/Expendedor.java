@@ -47,9 +47,10 @@ public class Expendedor {
 
     switch (tipo) {
     case SPRITE.getTipo:
-        if (pago.getValor()<SPRITE.getPrecio()){
+        if (pago.getValor() < SPRITE.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
-            return null;
+            throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
+                " lo cual es insuficiente, debe de tener un valor de al menos " + SPRITE.getPrecio());
         }
         else {
             vuelto = pago.getValor() - SPRITE.getPrecio();
