@@ -30,15 +30,15 @@ public class Expendedor {
         }
         for (int i = 0; i<cantidad; i++){
             Bebida temp = new Fanta(1300+i);
-            coca.addObjeto(temp);
+            fanta.addObjeto(temp);
         }
         for (int i = 0; i<cantidad; i++){
             Dulce temp = new Super8(2100+i);  
-            sprite.addObjeto(temp);
+            super8.addObjeto(temp);
         }   
         for (int i = 0; i<cantidad; i++){
             Dulce temp = new Snicker(2200+i);
-            sprite.addObjeto(temp);
+            snicker.addObjeto(temp);
         }         
 
 	}
@@ -70,13 +70,13 @@ public class Expendedor {
         if (pago.getValor() < FANTA.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
-                " lo cual es insuficiente, debe de tener un valor de al menos " + FAANTA.getPrecio());
+                " lo cual es insuficiente, debe de tener un valor de al menos " + FANTA.getPrecio());
         }
         else {
             vuelto = pago.getValor() - FANTA.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (fanta.isEmpty()) {
-                throw new NoHayProductoException("No quedan sprites");
+                throw new NoHayProductoException("No quedan fantas");
             }
             else { //Quedan productos, entonces compramos un producto
                 compra = fanta.getObjeto();
@@ -95,7 +95,7 @@ public class Expendedor {
             vuelto = pago.getValor() - COCACOLA.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (coca.isEmpty()) {
-                throw new NoHayProductoException("No quedan sprites");
+                throw new NoHayProductoException("No quedan cocacolas");
             }
             else { //Quedan productos, entonces compramos un producto
                 compra = coca.getObjeto();
@@ -114,7 +114,7 @@ public class Expendedor {
             vuelto = pago.getValor() - SNICKER.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (snicker.isEmpty()) {
-                throw new NoHayProductoException("No quedan sprites");
+                throw new NoHayProductoException("No quedan snickers");
             }
             else { //Quedan productos, entonces compramos un producto
                 compra = snicker.getObjeto();
@@ -134,7 +134,7 @@ public class Expendedor {
             vuelto = pago.getValor() - SUPER8.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
             if (super8.isEmpty()) {
-                throw new NoHayProductoException("No quedan sprites");
+                throw new NoHayProductoException("No quedan super8");
             }
             else { //Quedan productos, entonces compramos un producto
                 compra = super8.getObjeto();
