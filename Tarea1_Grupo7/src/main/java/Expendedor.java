@@ -10,6 +10,7 @@ public class Expendedor {
     private int vuelto;
     private Producto compra; 
 
+
 	public Expendedor(int cantidad){
 		coca = new Deposito<CocaCola>();
         sprite = new Deposito<Sprite>();
@@ -47,7 +48,7 @@ public class Expendedor {
             throw new PagoIncorrectoException();}
 
     switch (tipo) {
-    case SPRITE.getTipo:
+    case 11:
         if (pago.getValor() < SPRITE.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
@@ -65,7 +66,7 @@ public class Expendedor {
         }
         break; //Del caso sprite
 
-            case FANTA.getTipo:
+            case 13:
         if (pago.getValor() < FANTA.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
@@ -84,7 +85,7 @@ public class Expendedor {
         break;
 
 
-            case COCACOLA.getTipo:
+            case 12:
         if (pago.getValor() < COCACOLA.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
@@ -103,7 +104,7 @@ public class Expendedor {
         break;
 
 
-            case SNICKER.getTipo:
+            case 21:
         if (pago.getValor() < SNICKER.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
@@ -123,7 +124,7 @@ public class Expendedor {
 
 
 
-            case SUPER8.getTipo:
+            case 22:
         if (pago.getValor() < SUPER8.getPrecio()){
             monedaDeposito.addObjeto(pago); //El vuelto
             throw new PagoInsuficienteException("La moneda tiene un valor de " + pago.getValor() + 
