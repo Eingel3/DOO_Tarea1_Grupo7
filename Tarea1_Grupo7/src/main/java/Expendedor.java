@@ -7,6 +7,8 @@ public class Expendedor {
 
     private Deposito<Moneda> monedaDeposito;
 
+    private int vuelto;
+
 	public Expendedor(int cantidad){
 		coca = new Deposito<CocaCola>();
         sprite = new Deposito<Sprite>();
@@ -38,4 +40,27 @@ public class Expendedor {
         }         
 
 	}
+
+    public Producto comprarProducto(int tipo, Moneda pago){
+        if (pago == null){return null;}
+
+    switch (tipo) {
+    case SPRITE.getTipo:
+        if (pago.getValor()<SPRITE.getPrecio()){
+            monedaDeposito.addObjeto(pago); //El vuelto
+            return null;
+        }
+        else {
+            vuelto = pago.getValor() - SPRITE.getPrecio();
+
+        }
+        break;
+    }
+
+
+    //Lo siguiente es para manejar el vuelto
+    for (int i = 0; i < vuelto/100; i++){
+        monedaDeposito.addObjeto(new Moneda100());
+        }
+
 }
