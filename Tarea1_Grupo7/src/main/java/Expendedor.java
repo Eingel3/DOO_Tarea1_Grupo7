@@ -31,7 +31,7 @@ public class Expendedor {
             coca.addObjeto(temp);
         }
         for (int i = 0; i<cantidad; i++){
-            Dulce temp = new Super8(2100+i);
+            Dulce temp = new Super8(2100+i);  
             sprite.addObjeto(temp);
         }   
         for (int i = 0; i<cantidad; i++){
@@ -52,9 +52,11 @@ public class Expendedor {
         }
         else {
             vuelto = pago.getValor() - SPRITE.getPrecio();
+            //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
+            // Por ahora este metodo no es funcional, hasta que manejemos las excepciones
 
         }
-        break;
+        break; //Del caso sprite
     }
 
 
