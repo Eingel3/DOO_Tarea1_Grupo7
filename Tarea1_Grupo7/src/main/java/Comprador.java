@@ -23,7 +23,7 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
         //Si la linea de arriba no lanzo excepciones, podemos entregar el vuelto y consumir el Producto comprado
 
         consumido = comprado.consumir();
-        
+
         Moneda temp = refExp.getVuelto();
         while (temp != null){ //Mientras se sigan obteniendo monedas
         	vuelto = vuelto + temp.getValor();
@@ -45,5 +45,13 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
         	vuelto = pago.getValor();
         }
 
+	}
+
+	public int compradorVuelto(){
+		return vuelto;
+	}
+
+	public String compradorConsumido(){
+		return consumido;
 	}
 }
