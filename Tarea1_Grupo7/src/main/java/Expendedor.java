@@ -41,8 +41,9 @@ public class Expendedor {
 
 	}
 
-    public Producto comprarProducto(int tipo, Moneda pago){
-        if (pago == null){return null;}
+    public Producto comprarProducto(int tipo, Moneda pago) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
+        if (pago == null){
+            throw new PagoIncorrectoException();}
 
     switch (tipo) {
     case SPRITE.getTipo:
