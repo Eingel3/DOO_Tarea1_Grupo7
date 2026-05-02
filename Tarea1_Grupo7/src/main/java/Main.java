@@ -26,6 +26,29 @@ public class Main {
         System.out.println("Consumido: " + c2.compradorConsumido());
         System.out.println("Vuelto: " + c2.compradorVuelto());
 
+        System.out.println("Ahora hacemos todo lo anterior con el resto de Productos");
+
+        System.out.println("Comprar con precio exacto: ");
+        Comprador c5 = new Comprador(new Moneda500(), InformacionProducto.FANTA.getTipo(), exp);
+        System.out.println("Consumido: " + c5.compradorConsumido());
+        System.out.println("Vuelto: " + c5.compradorVuelto());
+        System.out.println("Comprar pero sin monedas");
+        Comprador c7 = new Comprador(null, InformacionProducto.FANTA.getTipo(), exp);
+        System.out.println("Consumido: " + c7.compradorConsumido());
+        System.out.println("Vuelto: " + c7.compradorVuelto());
+        System.out.println("Comprar pero el dinero es menos de lo que cuesta");
+        Comprador c8 = new Comprador(new Moneda100(), InformacionProducto.FANTA.getTipo(), exp);
+        System.out.println("Consumido: " + c8.compradorConsumido());
+        System.out.println("Vuelto: " + c8.compradorVuelto());
+
+        System.out.println("Comprar con pago de mas");
+        Comprador c6 = new Comprador(new Moneda1000(), InformacionProducto.FANTA.getTipo(), exp);
+        System.out.println("Consumido: " + c6.compradorConsumido());
+        System.out.println("Vuelto: " + c6.compradorVuelto());
+        System.out.println("Comprar pero ya se acabaron");
+        Comprador c9 = new Comprador(new Moneda1000(), InformacionProducto.FANTA.getTipo(), exp);
+        System.out.println("Consumido: " + c9.compradorConsumido());
+        System.out.println("Vuelto: " + c9.compradorVuelto());
     }
 
 	
