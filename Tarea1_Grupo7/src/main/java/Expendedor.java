@@ -57,7 +57,7 @@ public class Expendedor {
 
         }
         break; //Del caso sprite
-    }
+    }//end switch
 
 
     //Lo siguiente es para manejar el vuelto
@@ -65,4 +65,15 @@ public class Expendedor {
         monedaDeposito.addObjeto(new Moneda100());
         }
 
+
+    }
+
+    public Moneda getVuelto(){
+        if (monedaDeposito.isEmpty()){
+            return null;
+        }
+        else{
+        return monedaDeposito.getObjeto();
+        }
+    }
 }
