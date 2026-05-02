@@ -55,8 +55,9 @@ public class Expendedor {
         else {
             vuelto = pago.getValor() - SPRITE.getPrecio();
             //Para obtener el objeto, hemos de ver la excepcion NoHayProductoExcepcion
-            // Por ahora este metodo no es funcional, hasta que manejemos las excepciones
-
+            if (sprite.isEmpty()) {
+                throw new NoHayProductoException("No quedan sprites");
+            }
         }
         break; //Del caso sprite
     }//end switch
