@@ -10,8 +10,10 @@ public class MainInteractivo {
         System.out.println(" - Dulces:  21-Snicker, 22-Super8 (precio 500)");
         System.out.println("Monedas válidas: 100, 500, 1000");
         System.out.println("Escriba 'salir' para terminar.\n");
-
+        String entrada;
         while (true) {
+            System.out.print("Ingrese código de producto (11-13, 21-22): ");
+            entrada = sc.nextLine().trim();
 
         }
     }
