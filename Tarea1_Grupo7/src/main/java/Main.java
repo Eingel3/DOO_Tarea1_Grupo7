@@ -132,7 +132,10 @@ public class Main {
             System.out.println("Consumido: " + c24.compradorConsumido());
             System.out.println("Vuelto: " + c24.compradorVuelto());
 
-    }
+            //Ahora vemos lo de las instrucciones de la tarea, mostrar el funcionamiento de comparable con monedas
+        System.out.println("Prueba ordenar monedas mediante comparable");
+        Moneda[] muchas = {new Moneda1000(), new Moneda100(), new Moneda500(), new Moneda100(), new Moneda1000()};
 
-	
+     }
+
 }
