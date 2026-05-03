@@ -32,7 +32,8 @@ public class MainInteractivo {
             }
 
             Comprador c = new Comprador(m, codigo, exp);
-
+            System.out.println("Consumido: " + c.compradorConsumido());
+            System.out.println("Vuelto: " + c.compradorVuelto());
         }
     }
 }
