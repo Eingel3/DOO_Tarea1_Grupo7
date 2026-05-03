@@ -22,6 +22,15 @@ public class MainInteractivo {
             valorMoneda = sc.nextInt();
             sc.nextLine();
 
+            Moneda m = null;
+            switch (valorMoneda) {
+                case 100:  m = new Moneda100();  break;
+                case 500:  m = new Moneda500();  break;
+                case 1000: m = new Moneda1000(); break;
+                default:
+                    System.out.println("Moneda no válida.\n");
+            }
+
         }
     }
 }
