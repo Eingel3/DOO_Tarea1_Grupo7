@@ -134,8 +134,13 @@ public class Main {
 
             //Ahora vemos lo de las instrucciones de la tarea, mostrar el funcionamiento de comparable con monedas
         System.out.println("Prueba ordenar monedas mediante comparable");
+        //no usamos Deposito para simplificar
         Moneda[] muchas = {new Moneda1000(), new Moneda100(), new Moneda500(), new Moneda100(), new Moneda1000()};
 
+        System.out.println("Original: ");
+        for (Moneda m : muchas) {
+            System.out.print(m.getValor() + " ");
+        }
      }
 
 }
