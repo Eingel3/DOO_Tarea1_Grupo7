@@ -31,6 +31,8 @@ public class MainInteractivo {
                     System.out.println("Moneda no válida.\n");
             }
 
+            Comprador c = new Comprador(m, codigo, exp);
+
         }
     }
 }
