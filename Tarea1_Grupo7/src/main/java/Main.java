@@ -49,6 +49,89 @@ public class Main {
         Comprador c9 = new Comprador(new Moneda1000(), InformacionProducto.FANTA.getTipo(), exp);
         System.out.println("Consumido: " + c9.compradorConsumido());
         System.out.println("Vuelto: " + c9.compradorVuelto());
+
+                //Lo de abajo fue hecho mediante ChatGPT, segun el codigo de arriba de main
+
+            // ================== COCACOLA ==================
+            System.out.println("Comprar con precio exacto:");
+            Comprador c10 = new Comprador(new Moneda500(), InformacionProducto.COCACOLA.getTipo(), exp);
+            System.out.println("Consumido: " + c10.compradorConsumido());
+            System.out.println("Vuelto: " + c10.compradorVuelto());
+
+            System.out.println("Comprar pero sin monedas");
+            Comprador c11 = new Comprador(null, InformacionProducto.COCACOLA.getTipo(), exp);
+            System.out.println("Consumido: " + c11.compradorConsumido());
+            System.out.println("Vuelto: " + c11.compradorVuelto());
+
+            System.out.println("Comprar pero el dinero es menos de lo que cuesta");
+            Comprador c12 = new Comprador(new Moneda100(), InformacionProducto.COCACOLA.getTipo(), exp);
+            System.out.println("Consumido: " + c12.compradorConsumido());
+            System.out.println("Vuelto: " + c12.compradorVuelto());
+
+            System.out.println("Comprar con pago de mas");
+            Comprador c13 = new Comprador(new Moneda1000(), InformacionProducto.COCACOLA.getTipo(), exp);
+            System.out.println("Consumido: " + c13.compradorConsumido());
+            System.out.println("Vuelto: " + c13.compradorVuelto());
+
+            System.out.println("Comprar pero ya se acabaron");
+            Comprador c14 = new Comprador(new Moneda1000(), InformacionProducto.COCACOLA.getTipo(), exp);
+            System.out.println("Consumido: " + c14.compradorConsumido());
+            System.out.println("Vuelto: " + c14.compradorVuelto());
+
+
+// ================== SNICKER ==================
+            System.out.println("\nComprar con precio exacto:");
+            Comprador c15 = new Comprador(new Moneda500(), InformacionProducto.SNICKER.getTipo(), exp);
+            System.out.println("Consumido: " + c15.compradorConsumido());
+            System.out.println("Vuelto: " + c15.compradorVuelto());
+
+            System.out.println("Comprar pero sin monedas");
+            Comprador c16 = new Comprador(null, InformacionProducto.SNICKER.getTipo(), exp);
+            System.out.println("Consumido: " + c16.compradorConsumido());
+            System.out.println("Vuelto: " + c16.compradorVuelto());
+
+            System.out.println("Comprar pero el dinero es menos de lo que cuesta");
+            Comprador c17 = new Comprador(new Moneda100(), InformacionProducto.SNICKER.getTipo(), exp);
+            System.out.println("Consumido: " + c17.compradorConsumido());
+            System.out.println("Vuelto: " + c17.compradorVuelto());
+
+            System.out.println("Comprar con pago de mas");
+            Comprador c18 = new Comprador(new Moneda1000(), InformacionProducto.SNICKER.getTipo(), exp);
+            System.out.println("Consumido: " + c18.compradorConsumido());
+            System.out.println("Vuelto: " + c18.compradorVuelto());
+
+            System.out.println("Comprar pero ya se acabaron");
+            Comprador c19 = new Comprador(new Moneda1000(), InformacionProducto.SNICKER.getTipo(), exp);
+            System.out.println("Consumido: " + c19.compradorConsumido());
+            System.out.println("Vuelto: " + c19.compradorVuelto());
+
+
+// ================== SUPER8 ==================
+            System.out.println("\nComprar con precio exacto:");
+            Comprador c20 = new Comprador(new Moneda500(), InformacionProducto.SUPER8.getTipo(), exp);
+            System.out.println("Consumido: " + c20.compradorConsumido());
+            System.out.println("Vuelto: " + c20.compradorVuelto());
+
+            System.out.println("Comprar pero sin monedas");
+            Comprador c21 = new Comprador(null, InformacionProducto.SUPER8.getTipo(), exp);
+            System.out.println("Consumido: " + c21.compradorConsumido());
+            System.out.println("Vuelto: " + c21.compradorVuelto());
+
+            System.out.println("Comprar pero el dinero es menos de lo que cuesta");
+            Comprador c22 = new Comprador(new Moneda100(), InformacionProducto.SUPER8.getTipo(), exp);
+            System.out.println("Consumido: " + c22.compradorConsumido());
+            System.out.println("Vuelto: " + c22.compradorVuelto());
+
+            System.out.println("Comprar con pago de mas");
+            Comprador c23 = new Comprador(new Moneda1000(), InformacionProducto.SUPER8.getTipo(), exp);
+            System.out.println("Consumido: " + c23.compradorConsumido());
+            System.out.println("Vuelto: " + c23.compradorVuelto());
+
+            System.out.println("Comprar pero ya se acabaron");
+            Comprador c24 = new Comprador(new Moneda1000(), InformacionProducto.SUPER8.getTipo(), exp);
+            System.out.println("Consumido: " + c24.compradorConsumido());
+            System.out.println("Vuelto: " + c24.compradorVuelto());
+
     }
 
 	
