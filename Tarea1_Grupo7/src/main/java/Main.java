@@ -145,7 +145,10 @@ public class Main {
 
         java.util.Arrays.sort(muchas);  // finalmente usamos el sort de compareTo
 
-        
+        System.out.println("ordenados: ");
+        for (Moneda m : muchas) {
+            System.out.print(m.getValor() + " ");
+        }
      }
 
 }
