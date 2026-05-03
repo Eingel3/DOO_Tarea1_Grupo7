@@ -17,6 +17,10 @@ public class MainInteractivo {
             int codigo;
             codigo = Integer.parseInt(entrada);
 
+            System.out.print("Ingrese valor de la moneda (100, 500, 1000): ");
+            int valorMoneda;
+            valorMoneda = sc.nextInt();
+            sc.nextLine();
 
         }
     }
