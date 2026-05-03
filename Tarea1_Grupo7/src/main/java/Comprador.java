@@ -5,6 +5,12 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
 	private String consumido; //que se ha consumido
 	private int vuelto;
 
+	/**
+	 *
+	 * @param pago es la moneda con la que se pagara al expendedor
+	 * @param productoID es el tipo de producto que se quiere comprar
+	 * @param refExp es el expendedor al que se va a comprar el producto
+	 */
 	public Comprador(Moneda pago, int productoID, Expendedor refExp){
 		//Recibe una moneda, entero identificador del producto y una referencia a un Expendedor
 		//Compra en el expendedor usando la moneda pago el producto productoID, ej: productoRecivido = refExp.Comprar(pago, productoID);
@@ -25,7 +31,7 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
         	vuelto = vuelto + temp.getValor();
         	temp = refExp.getVuelto();
         }
-        }
+        } //Ahora vemos lo que pasa si es que existen alguna de las excepciones
         catch (Expendedor.PagoIncorrectoException e){// No se devuelve nada, vuelt es 0 y producto null
         	System.out.println("Pago incorrecto: " + e.getMessage()); //e.getMessage() obtiene como String el mesnaje del exception
         	consumido = "No se ha consumido nada.";
@@ -43,10 +49,18 @@ public class Comprador{ //El comprador debe de recibir una moneda y el nombre de
 
 	}
 
+	/**
+	 *
+	 * @return vuelto retorna el vuelto al cliente
+	 */
 	public int compradorVuelto(){
 		return vuelto;
 	}
 
+	/**
+	 *
+	 * @return consumido es un string con el nombre del producto consumido
+	 */
 	public String compradorConsumido(){
 		return consumido;
 	}
