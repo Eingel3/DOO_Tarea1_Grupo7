@@ -7,5 +7,9 @@ public abstract class Producto {
 		return serie;
 	}
 
+	/**
+	 * Se edita en las clases Sprite, Fanta, Snicker.....
+	 * @return retorna un String que indica que producto fue consumido
+	 */
 	public abstract String consumir();
 }
