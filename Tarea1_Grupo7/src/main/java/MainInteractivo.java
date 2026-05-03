@@ -14,6 +14,9 @@ public class MainInteractivo {
         while (true) {
             System.out.print("Ingrese código de producto (11-13, 21-22): ");
             entrada = sc.nextLine().trim();
+            int codigo;
+            codigo = Integer.parseInt(entrada);
+
 
         }
     }
