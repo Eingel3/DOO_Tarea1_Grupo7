@@ -141,6 +141,11 @@ public class Main {
         for (Moneda m : muchas) {
             System.out.print(m.getValor() + " ");
         }
+
+
+        java.util.Arrays.sort(muchas);  // finalmente usamos el sort de compareTo
+
+        
      }
 
 }
