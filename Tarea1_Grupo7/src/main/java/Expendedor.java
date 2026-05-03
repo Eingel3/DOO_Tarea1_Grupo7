@@ -8,9 +8,14 @@ public class Expendedor {
     private Deposito<Moneda> monedaDeposito;
 
     private int vuelto;
-    private Producto compra; 
+    private Producto compra;
 
-
+    /**
+     *
+     * @param cantidad cantidad de Productos por deposito
+     *  Llena los depositos segun cantidad
+     *  Crea un deposito de monedas
+     */
 	public Expendedor(int cantidad){
 		coca = new Deposito<CocaCola>();
         sprite = new Deposito<Sprite>();
@@ -43,6 +48,15 @@ public class Expendedor {
 
 	}
 
+    /**
+     *
+     * @param tipo es el tipo de producto
+     * @param pago es la moneda con la cual se comprara el producto
+     * @return Retorna el producto comprado
+     * @throws PagoIncorrectoException Pasa si la moneda con la que se quiere pagar es null
+     * @throws PagoInsuficienteException Pasa cuando la moneda tiene un valor menor al del producto
+     * @throws NoHayProductoException Pasa cuando en el deposito no queda del producto deseado
+     */
     public Producto comprarProducto(int tipo, Moneda pago) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
         if (pago == null){
             throw new PagoIncorrectoException();}
@@ -161,6 +175,11 @@ public class Expendedor {
 
     }
 
+    /**
+     *
+     * @return Moneda retorna una moneda del deposito de monedas donde se deja el vuelto
+     * si el deposito esta vacio retorna null
+     */
     public Moneda getVuelto(){
         if (monedaDeposito.isEmpty()){
             return null;
@@ -169,7 +188,7 @@ public class Expendedor {
         return monedaDeposito.getObjeto();
         }
     }
-
+// Abajo estan las excepciones
     class NoHayProductoException extends Exception {
         public NoHayProductoException(String mensajeError0){
             super(mensajeError0);
